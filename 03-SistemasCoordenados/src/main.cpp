@@ -5,6 +5,8 @@
 #include <string>
 #include <iostream>
 
+#include "Headers/Shader.h"
+
 //glfw include
 #include <GLFW/glfw3.h>
 
@@ -27,6 +29,8 @@ int lastMousePosX;
 int lastMousePosY;
 
 double deltaTime;
+
+Shader shader;
 
 // Se definen todos las funciones.
 void reshapeCallback(GLFWwindow* Window, int widthRes, int heightRes);
@@ -94,6 +98,7 @@ void init(int width, int height, std::string strTitle, bool bFullScreen) {
 	glViewport(0, 0, screenWidth, screenHeight);
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
 
+	
 	// Se definen los vertices de la geometria a dibujar
 	Vertex vertices [] =
 	{

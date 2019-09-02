@@ -1,5 +1,6 @@
 #include "Headers/Shader.h"
 
+
 std::string Shader::loadShaderFile(std::string strFile) {
 	std::ifstream fin(strFile.c_str());
 
