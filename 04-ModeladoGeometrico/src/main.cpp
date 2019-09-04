@@ -15,11 +15,11 @@
 #include "Headers/Shader.h"
 
 // Model geometric includes
-/*
+
 #include "Headers/Sphere.h"
 #include "Headers/Cylinder.h"
 #include "Headers/Box.h"
-*/
+
 
 //GLM include
 #define GLM_FORCE_RADIANS
@@ -34,9 +34,9 @@ GLFWwindow * window;
 
 Shader shader;
 
-/*Sphere sphere1(20, 20);
+Sphere sphere1(20, 20);
 Cylinder cylinder1(20, 20, 0.5, 0.5);
-Box box1;*/
+Box box1;
 
 bool exitApp = false;
 int lastMousePosX;
@@ -108,7 +108,7 @@ void init(int width, int height, std::string strTitle, bool bFullScreen) {
 
 	shader.initialize("../Shaders/colorShader.vs", "../Shaders/colorShader.fs");
 
-	/*sphere1.init();
+	sphere1.init();
 	sphere1.setShader(&shader);
 	sphere1.setColor(glm::vec4(0.3, 0.3, 1.0, 1.0));
 
@@ -118,7 +118,7 @@ void init(int width, int height, std::string strTitle, bool bFullScreen) {
 
 	box1.init();
 	box1.setShader(&shader);
-	box1.setColor(glm::vec4(0.3, 0.3, 1.0, 1.0));*/
+	box1.setColor(glm::vec4(0.3, 0.3, 1.0, 1.0));
 }
 
 void destroy() {
@@ -127,9 +127,9 @@ void destroy() {
 	// --------- IMPORTANTE ----------
 	// Eliminar los shader y buffers creados.
 
-	/*sphere1.destroy();
+	sphere1.destroy();
 	cylinder1.destroy();
-	box1.destroy();*/
+	box1.destroy();
 
 	shader.destroy();
 }
@@ -197,14 +197,14 @@ void applicationLoop() {
 
 		glm::mat4 model = glm::mat4(1.0f);
 
-		/*sphere1.render(model);
-		sphere1.enableWireMode();*/
+		sphere1.render(model);
+		sphere1.enableWireMode();
 
-		/*cylinder1.render(model);
-		cylinder1.enableWireMode();*/
+		cylinder1.render(model);
+		cylinder1.enableWireMode();
 
-		/*box1.render(model);
-		box1.enableWireMode();*/
+		box1.render(model);
+		box1.enableWireMode();
 
 		shader.turnOff();
 
